@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Atanu's Blog</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  background-image: url("fff.jpg");
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   margin-top: 20px;
+   padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+#blogtitle{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+#blogdis{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
+#blogdis{
+  text-transform: capitalize;
+}
+#spacr_is{
+  padding: 5px;
+  background-color: #ddd;
+  max-width: 100%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Atanu Dutta Blog</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+        <h1 >Today <%= kindofday %> </h1>
+      <% for(var i=0;i<newblogtitle.length;i++){%>
+        <h2 id="blogtitle"><%= newblogtitle[i] %></h2>
+        <h5 id="blogdate">Uplode date :- <%= blogdate[i] %></h5>
+        <p>Description..</p>
+        <p id="blogdis"><%= newblogdis[i] %></p>
+        <div id="spacr_is" style="height:10px;"></div>
+        
+    <%}%>
+
+
+      
+    </div>
+   
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p >Keep Updating , Grow Together</p>
+      <p><a href="/submitblog"><b>Submit Blog</b></a></p>
+    </div>
+ 
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p><a href="#">Facebook</a></p>
+      <p><a href="#">Instagram</a></p>
+      <p><a href="#">Github</a></p>
+      <p><a href="#">Twtter</a></p>
+      <p><a href="#">LinkedIN</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Thanks for chooseing this keep updating :)</h2>
+</div>
+
+</body>
+</html>

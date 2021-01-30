@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <style>
+
+
+div#sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#title{
+    margin-bottom: 22px;
+    width: 70%;
+    text-align: center;
+    font-size: larger;
+    height: 67px;
+    border: 2px solid red;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+#date{
+    margin-bottom: 22px;
+    width: 70%;
+    text-align: center;
+    font-size: larger;
+    height: 67px;
+    
+    font-weight: 900;
+    text-transform: uppercase;
+    border: none;
+    color: rgb(34, 33, 33);
+}
+#dis{
+    margin-bottom: 22px;
+    width: 70%;
+    text-align: center;
+    font-size: larger;
+    height: 12rem;
+    border: 2px solid green;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+textarea {
+  width: 70%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+  </style>
+</head>
+<body>
+
+
+<form action="/" method="post">
+   <div id="sub">
+    <h1>Submit Your Blog Here</h1>
+    <input type="text"  id ="title"name="newitemtitle" placeholder="what is the type" required >
+
+<input id="dis" type="text" name="newitemdis" placeholder="what is the blog" required placeholder="Write The Blog Description...">
+<input type="text"  id="date"name="newitemdate" value="<%= kindofday %>" readonly>
+<button type="submit" class="btn btn-lg btn-primary"name="button">ADD</button>
+</div>
+</form>
+
+</body>
+</html>
